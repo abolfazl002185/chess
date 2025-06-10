@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی شطرنج</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="time-selection" class="container">
+        <h1>بازی شطرنج</h1>
+        <div class="form-group">
+            <label for="game-time">زمان بازی را انتخاب کنید (دقیقه):</label>
+            <input type="number" id="game-time" min="1" max="180" value="10">
+        </div>
+        <button id="start-game" class="btn">شروع بازی</button>
+    </div>
 
+    <div id="game-container" class="container hidden">
+        <div class="game-header">
+            <div class="player-time white">
+                <span>سفید</span>
+                <div class="time-display" id="white-time">10:00</div>
+            </div>
+            <button id="reset-game" class="btn">بازی جدید</button>
+            <div class="player-time black">
+                <span>سیاه</span>
+                <div class="time-display" id="black-time">10:00</div>
+            </div>
+        </div>
+        
+        <div class="chessboard-container">
+            <div id="chessboard"></div>
+        </div>
+        
+        <div id="game-result" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
